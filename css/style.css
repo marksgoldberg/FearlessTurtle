@@ -1,0 +1,487 @@
+css
+/* ============================================
+   Site-wide styles
+   Edit the values in :root to change colors/fonts
+   across the entire site in one place.
+   ============================================ */
+
+:root {
+  --color-bg: #9fe2bf;       /* sea foam green — the page itself */
+  --color-frame: #d9bf94;    /* sandy tan — the border framing the page */
+  --color-text: #2a2822;
+  --color-muted: #595f56;
+  --color-accent: #8a5a3f;
+  --color-border: #c7a874;
+  --font-body: Georgia, 'Times New Roman', serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --max-width: 42rem;
+  --frame-width: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  background: var(--color-frame);
+}
+
+body {
+  margin: var(--frame-width);
+  min-height: calc(100vh - (var(--frame-width) * 2));
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.65;
+  border-radius: 10px;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---- Header / nav ---- */
+
+header.site-header {
+  border-bottom: 1px solid var(--color-border);
+  padding: 2.5rem 0 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+header.site-header .site-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem;
+}
+
+header.site-header .site-title a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+header.site-header .tagline {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin: 0 0 1rem;
+}
+
+nav.site-nav {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+}
+
+nav.site-nav a {
+  margin-right: 1.25rem;
+  color: var(--color-text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+nav.site-nav a:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+/* ---- Footer ---- */
+
+footer.site-footer {
+  margin-top: 4rem;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ---- Landing page intro ---- */
+
+.intro {
+  margin-bottom: 3rem;
+}
+
+.intro h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ---- Essay / article list ---- */
+
+.essay-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.essay-list li {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.essay-list li:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.essay-list .essay-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.essay-list .essay-title a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.essay-list .essay-title a:hover {
+  color: var(--color-accent);
+}
+
+.essay-list .essay-meta {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  margin-top: 0.2rem;
+}
+
+.essay-list .essay-excerpt {
+  margin-top: 0.4rem;
+  color: var(--color-muted);
+  font-size: 0.97rem;
+}
+
+/* ---- Single essay page ---- */
+
+article.essay h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 0.3rem;
+}
+
+article.essay .essay-meta {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-bottom: 2.5rem;
+}
+
+article.essay p {
+  margin: 1.3rem 0;
+}
+
+article.essay blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.2rem;
+  border-left: 3px solid var(--color-border);
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 3rem;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  :root { --frame-width: 0.6rem; }
+  body { font-size: 17px; border-radius: 6px; }
+  header.site-header { padding-top: 1.5rem; }
+}
+
+If you’d rather upload the file than paste over it: on that same style.css page in GitHub, there’s an “...” menu (or a cloud/upload icon near the pencil, depending on your screen) with a “Delete file” option, or you can go up to the css folder, click Add file → Upload files, and drag in the style.css you extracted from the zip — GitHub will recognize it has the same name and offer to replace it. But copy-pasting the text above directly into the edit view is the faster route since you don’t need to dig through the zip at all.
+
+there is no css folder in the repo
+
+That’s odd, since the site is clearly pulling in styling from somewhere. Rather than keep going back and forth guessing at what you’re seeing, could you share the link to your GitHub repo (the github.com URL for it)? If it’s public, I can look at the actual file structure myself and give you the exact folder/file to click into instead of us going back and forth.
+
+https://github.com/marksgoldberg/FearlessTurtle
+
+That explains it — I had the agent check your repo, and the root only has CNAME, README.md, about.html, index.html, plus two files called your-site.zip and yoursite_20261015 1.zip. The zip files themselves got uploaded as-is — GitHub just stores a .zip as one opaque file, it doesn’t automatically unpack it into folders. That’s why there’s no css or essays folder: they’re sitting zipped up inside those two files instead of being unpacked into the repo.
+
+Also worth flagging: this repo belongs to marksgoldberg, not mrmarkgoldberg — I had the wrong username in the README’s instructions. I’ll fix that at the end too.
+
+Given drag-and-drop uploads have been finicky, the most reliable path from here is to create each missing file directly in GitHub’s browser editor, which auto-creates folders for you when you type a path with a slash in the filename:
+
+1. Delete the two zip files (they’re just clutter now): open each one in the repo, click the trash-can/”...” → Delete file, commit.
+
+2. Create css/style.css:
+
+Click “Add file” → “Create new file”
+In the “Name your file” box at the top, type exactly: css/style.css (typing the slash auto-creates the css folder)
+Paste in the CSS content I gave you in my last message
+Commit changes
+
+3. Create the four essay files, the same way — click “Add file” → “Create new file” each time, type the path shown, paste the matching content below, commit:
+
+File path: essays/index.html
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essays &mdash; The Fearless Turtle</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <p class="site-title"><a href="../index.html">The Fearless Turtle</a></p>
+      <nav class="site-nav">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Essays</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>All essays</h1>
+
+    <!--
+      Every time you publish a new essay, copy essay-template.html
+      to a new file in this folder, then add a matching <li> entry
+      here (newest at the top).
+    -->
+    <ul class="essay-list">
+
+      <li>
+        <p class="essay-title"><a href="second-essay.html">Your Second Essay Title</a></p>
+        <p class="essay-meta">August 2026</p>
+        <p class="essay-excerpt">
+          Same idea &mdash; a short teaser line for the second piece.
+        </p>
+      </li>
+
+      <li>
+        <p class="essay-title"><a href="first-essay.html">Your First Essay Title</a></p>
+        <p class="essay-meta">August 2026</p>
+        <p class="essay-excerpt">
+          A one or two sentence teaser of what this essay is about, pulled from
+          the opening or written separately to hook the reader.
+        </p>
+      </li>
+
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Mark Goldberg. Built by hand.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+File path: essays/essay-template.html
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 1. Change the title below (shows in the browser tab and search results) -->
+  <title>Essay Title Goes Here &mdash; The Fearless Turtle</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <p class="site-title"><a href="../index.html">The Fearless Turtle</a></p>
+      <nav class="site-nav">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Essays</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="essay">
+
+      <!-- 2. Change the heading and date -->
+      <h1>Essay Title Goes Here</h1>
+      <p class="essay-meta">Month Year</p>
+
+      <!-- 3. Write the essay itself as a series of paragraphs -->
+      <p>
+        Your first paragraph goes here. Keep using <code>&lt;p&gt;</code> tags
+        for each new paragraph &mdash; that's all you need for a normal essay.
+      </p>
+
+      <p>
+        A second paragraph. You can use
+        <a href="https://example.com">a link like this</a> if you want to
+        reference something.
+      </p>
+
+      <blockquote>
+        You can also add a pull-quote or block quotation like this if useful.
+      </blockquote>
+
+      <p>
+        And so on, until the essay is finished.
+      </p>
+
+      <p><a class="back-link" href="index.html">&larr; Back to all essays</a></p>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Mark Goldberg. Built by hand.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+File path: essays/first-essay.html
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your First Essay Title &mdash; The Fearless Turtle</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <p class="site-title"><a href="../index.html">The Fearless Turtle</a></p>
+      <nav class="site-nav">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Essays</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="essay">
+
+      <h1>Your First Essay Title</h1>
+      <p class="essay-meta">August 2026</p>
+
+      <p>
+        This is a placeholder essay so you can see how the page looks and
+        reads with real paragraphs of text in it. Replace everything in this
+        &lt;article&gt; with your actual essay when you're ready &mdash; the
+        title above, the date, and all of this body text.
+      </p>
+
+      <p>
+        Notice that the page is just plain HTML: a heading, a date, and a
+        series of paragraphs. You don't need to touch the header, footer, or
+        navigation at the top and bottom &mdash; those stay the same on every
+        page and are already wired up to link back to the essay index and the
+        homepage.
+      </p>
+
+      <blockquote>
+        This is what a block quote looks like, in case you want to set off a
+        quotation or an important line.
+      </blockquote>
+
+      <p>
+        When you're done writing, save the file, and if you've already
+        deployed the site, upload the change (see the README for how). That's
+        the whole workflow for publishing a new piece.
+      </p>
+
+      <p><a class="back-link" href="index.html">&larr; Back to all essays</a></p>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Mark Goldberg. Built by hand.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+File path: essays/second-essay.html
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Second Essay Title &mdash; The Fearless Turtle</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <p class="site-title"><a href="../index.html">The Fearless Turtle</a></p>
+      <nav class="site-nav">
+        <a href="../index.html">Home</a>
+        <a href="index.html">Essays</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="essay">
+
+      <h1>Your Second Essay Title</h1>
+      <p class="essay-meta">August 2026</p>
+
+      <p>
+        A second placeholder essay, mostly to prove that adding a new piece
+        just means copying <code>essay-template.html</code> to a new filename
+        in this same folder, editing the title/date/body, and adding one
+        entry to <code>essays/index.html</code> (and optionally the homepage).
+      </p>
+
+      <p>
+        Everything else &mdash; styling, navigation, layout &mdash; is shared
+        automatically because every page links to the same
+        <code>css/style.css</code> file.
+      </p>
+
+      <p><a class="back-link" href="index.html">&larr; Back to all essays</a></p>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Mark Goldberg. Built by hand.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
