@@ -196,8 +196,15 @@ article.essay blockquote {
   font-size: 0.9rem;
 }
 
-@media (max-width: 53px) {
-  :root { --frame-width: 0.6rem; }
-  body { font-size: 17px; border-radius: 6px; }
-  header.site-header { padding-top: 1.5rem; }
+figure.portrait {
+  margin: 2rem 0;
+  max-width: 320px;
+}
+
+figure.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(42, 40, 34, 0.25);
 }
