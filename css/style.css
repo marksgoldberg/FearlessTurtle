@@ -196,7 +196,7 @@ article.essay blockquote {
   font-size: 0.9rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 200px) {
   :root { --frame-width: 0.6rem; }
   body { font-size: 17px; border-radius: 6px; }
   header.site-header { padding-top: 1.5rem; }
