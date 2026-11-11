@@ -1,10 +1,9 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your First Essay Title &mdash; The Fearless Turtle</title>
+  <title>Essays &mdash; The Fearless Turtle</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -21,41 +20,33 @@ html
   </header>
 
   <main class="wrap">
-    <article class="essay">
+    <h1>All essays</h1>
 
-      <h1>Your First Essay Title</h1>
-      <p class="essay-meta">August 2026</p>
+    <!--
+      TESTING the location and editing....Every time you publish a new essay, copy essay-template.html
+      to a new file in this folder, then add a matching <li> entry
+      here (newest at the top).
+    -->
+    <ul class="essay-list">
 
-      <p>
-        TESTING THE EDITS
-        This is a placeholder essay so you can see how the page looks and
-        reads with real paragraphs of text in it. Replace everything in this
-        &lt;article&gt; with your actual essay when you're ready &mdash; the
-        title above, the date, and all of this body text.
-      </p>
+      <li>
+        <p class="essay-title"><a href="second-essay.html">Your Second Essay Title</a></p>
+        <p class="essay-meta">August 2026</p>
+        <p class="essay-excerpt">
+          Same idea &mdash; a short teaser line for the second piece.
+        </p>
+      </li>
 
-      <p>
-        Notice that the page is just plain HTML: a heading, a date, and a
-        series of paragraphs. You don't need to touch the header, footer, or
-        navigation at the top and bottom &mdash; those stay the same on every
-        page and are already wired up to link back to the essay index and the
-        homepage.
-      </p>
+      <li>
+        <p class="essay-title"><a href="first-essay.html">Your First Essay Title</a></p>
+        <p class="essay-meta">August 2026</p>
+        <p class="essay-excerpt">
+          TESTING 02 the location and editing....A one or two sentence teaser of what this essay is about, pulled from
+          the opening or written separately to hook the reader.
+        </p>
+      </li>
 
-      <blockquote>
-        This is what a block quote looks like, in case you want to set off a
-        quotation or an important line.
-      </blockquote>
-
-      <p>
-        When you're done writing, save the file, and if you've already
-        deployed the site, upload the change (see the README for how). That's
-        the whole workflow for publishing a new piece.
-      </p>
-
-      <p><a class="back-link" href="index.html">&larr; Back to all essays</a></p>
-
-    </article>
+    </ul>
   </main>
 
   <footer class="site-footer">
